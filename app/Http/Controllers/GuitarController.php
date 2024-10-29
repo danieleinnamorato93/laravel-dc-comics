@@ -37,7 +37,8 @@ class GuitarController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $guitar= Guitar::findOrFail($id);
+        return view ("guitars.show", compact("guitar"));
     }
 
     /**
