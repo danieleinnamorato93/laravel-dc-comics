@@ -18,7 +18,7 @@ class GuitarSeeder extends Seeder
                     "title" => "Fender Stratocaster",
                     "description" => "Una delle chitarre più iconiche di sempre, utilizzata da artisti come Jimi Hendrix e Eric Clapton. Perfetta per rock, blues e pop.",
                     "thumb" => "https://example.com/images/fender_stratocaster.jpg",
-                    "price" => 1200.00
+                    "price" => 1200.00,
                     "series" => "Stratocaster",
                     "release_date" => "1954-06-01",
                     "type" => "electric",
@@ -29,7 +29,7 @@ class GuitarSeeder extends Seeder
                     "title" => "Gibson Les Paul",
                     "description" => "La Les Paul è una chitarra dal suono caldo e profondo, popolare per generi come rock e blues. Usata da artisti come Jimmy Page.",
                     "thumb" => "https://example.com/images/gibson_les_paul.jpg",
-                    "price" => 2500.00
+                    "price" => 2500.00,
                     "series" => "Les Paul",
                     "release_date" => "1952-01-01",
                     "type" => "electric",
@@ -40,7 +40,7 @@ class GuitarSeeder extends Seeder
                     "title" => "Ibanez RG Series",
                     "description" => "Una chitarra pensata per il metal e hard rock, con un manico veloce e pickup potenti. Scelta da artisti come Steve Vai.",
                     "thumb" => "https://example.com/images/ibanez_rg.jpg",
-                    "price" => 1100.00
+                    "price" => 1100.00,
                     "series" => "RG",
                     "release_date" => "1987-01-01",
                     "type" => "electric",
@@ -51,7 +51,7 @@ class GuitarSeeder extends Seeder
                     "title" => "Martin D-28",
                     "description" => "Chitarra acustica leggendaria, famosa per il suo suono ricco e bilanciato. Utilizzata da artisti folk e country come Johnny Cash.",
                     "thumb" => "https://example.com/images/martin_d28.jpg",
-                    "price" => 3000.00
+                    "price" => 3000.00,
                     "series" => "D-28",
                     "release_date" => "1931-01-01",
                     "type" => "acoustic",
