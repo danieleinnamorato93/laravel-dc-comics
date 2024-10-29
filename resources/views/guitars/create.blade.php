@@ -3,13 +3,13 @@
 @section("page-title")
 
 @section("main-content")
-<h1>Guitar Create:</h1>
+
 <div class="container">
       <div class="row justify-content-center">
         <form class="col-12  card p-4" action="">
-     
+            <h1>Guitar Create:</h1>
     
-        <div class="card col-2  m-3">
+             
                 {{--? "title","description","thumb","price","series","release_date","type","genre","artist"--}}
     
                 <div class="mb-3">
@@ -56,10 +56,6 @@
         </form>
           
 
-            </div>
-          </div>
-      
-        </div>
     </div>
 
 </div>
