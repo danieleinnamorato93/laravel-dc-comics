@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guitar;
 use Illuminate\Http\Request;
 
 class GuitarController extends Controller
@@ -11,7 +12,7 @@ class GuitarController extends Controller
      */
     public function index()
     {
-        //
+        return view("guitars.index", compact("guitars"));
     }
 
     /**

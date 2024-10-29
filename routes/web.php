@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("/guitars", [GuitarController::class,"index"])->name("guitars.index");
+Route::get("/guitars/{id}", [GuitarController::class,"show"])->name("guitars.show");

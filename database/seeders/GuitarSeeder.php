@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Guitar;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,101 +12,77 @@ class GuitarSeeder extends Seeder
      */
     public function run(): void
     {
-        $guitarsData = return [
-            [
-                "title" => "Fender American Professional II Stratocaster",
-                "description" => "The Fender American Professional II Stratocaster is a versatile and high-performance guitar that combines classic tones with modern features. Equipped with V-Mod II single-coil pickups and a Deep 'C' neck, it offers a comfortable feel and precise playability for all music styles.",
-                "thumb" => "https://example.com/images/fender-stratocaster.jpg",
-                "price" => "$1,499.99",
-                "series" => "American Professional II",
-                "release_date" => "2021-01-15",
-                "type" => "electric guitar",
-                "artists" => [
-                    "Eric Clapton",
-                    "Jimi Hendrix",
-                    "John Mayer"
+        $guitarsData =  [
+                     
+                [
+                    "title" => "Fender Stratocaster",
+                    "description" => "Una delle chitarre più iconiche di sempre, utilizzata da artisti come Jimi Hendrix e Eric Clapton. Perfetta per rock, blues e pop.",
+                    "thumb" => "https://example.com/images/fender_stratocaster.jpg",
+                    "price" => "$1,200",
+                    "series" => "Stratocaster",
+                    "release_date" => "1954-06-01",
+                    "type" => "electric",
+                    "genre" => "Rock",
+                    "artist" => "Jimi Hendrix",
                 ],
-                "genres" => [
-                    "Rock",
-                    "Blues",
-                    "Pop"
-                ]
-            ],
-            [
-                "title" => "Gibson Les Paul Standard '50s",
-                "description" => "The Gibson Les Paul Standard '50s is a timeless classic, known for its warm, rich tone and sustain. With Burstbucker pickups and a solid mahogany body, this guitar offers authentic vintage tone and a feel that recalls the golden era of rock.",
-                "thumb" => "https://example.com/images/gibson-les-paul.jpg",
-                "price" => "$2,499.99",
-                "series" => "Les Paul Standard",
-                "release_date" => "2020-06-01",
-                "type" => "electric guitar",
-                "artists" => [
-                    "Jimmy Page",
-                    "Slash",
-                    "Joe Bonamassa"
+                [
+                    "title" => "Gibson Les Paul",
+                    "description" => "La Les Paul è una chitarra dal suono caldo e profondo, popolare per generi come rock e blues. Usata da artisti come Jimmy Page.",
+                    "thumb" => "https://example.com/images/gibson_les_paul.jpg",
+                    "price" => "$2,500",
+                    "series" => "Les Paul",
+                    "release_date" => "1952-01-01",
+                    "type" => "electric",
+                    "genre" => "Blues",
+                    "artist" => "Jimmy Page",
                 ],
-                "genres" => [
-                    "Rock",
-                    "Blues",
-                    "Metal"
-                ]
-            ],
-            [
-                "title" => "Ibanez RG550",
-                "description" => "The Ibanez RG550 is a high-speed shred machine that features a super-fast Wizard neck and versatile V7 and V8 pickups. It’s a favorite among metal guitarists who need performance and precision.",
-                "thumb" => "https://example.com/images/ibanez-rg550.jpg",
-                "price" => "$1,099.99",
-                "series" => "RG",
-                "release_date" => "2021-08-20",
-                "type" => "electric guitar",
-                "artists" => [
-                    "Steve Vai",
-                    "Paul Gilbert",
-                    "Herman Li"
+                [
+                    "title" => "Ibanez RG Series",
+                    "description" => "Una chitarra pensata per il metal e hard rock, con un manico veloce e pickup potenti. Scelta da artisti come Steve Vai.",
+                    "thumb" => "https://example.com/images/ibanez_rg.jpg",
+                    "price" => "$1,100",
+                    "series" => "RG",
+                    "release_date" => "1987-01-01",
+                    "type" => "electric",
+                    "genre" => "Metal",
+                    "artist" => "Steve Vai",
                 ],
-                "genres" => [
-                    "Metal",
-                    "Rock"
-                ]
-            ],
-            [
-                "title" => "PRS SE Custom 24",
-                "description" => "The PRS SE Custom 24 combines classic PRS design with a modern build, featuring a maple top and versatile humbuckers that handle everything from blues to heavy rock with ease.",
-                "thumb" => "https://example.com/images/prs-se-custom-24.jpg",
-                "price" => "$849.99",
-                "series" => "SE Custom",
-                "release_date" => "2020-10-10",
-                "type" => "electric guitar",
-                "artists" => [
-                    "Mark Tremonti",
-                    "Carlos Santana",
-                    "Myles Kennedy"
+                [
+                    "title" => "Martin D-28",
+                    "description" => "Chitarra acustica leggendaria, famosa per il suo suono ricco e bilanciato. Utilizzata da artisti folk e country come Johnny Cash.",
+                    "thumb" => "https://example.com/images/martin_d28.jpg",
+                    "price" => "$3,000",
+                    "series" => "D-28",
+                    "release_date" => "1931-01-01",
+                    "type" => "acoustic",
+                    "genre" => "Folk",
+                    "artist" => "Johnny Cash",
                 ],
-                "genres" => [
-                    "Rock",
-                    "Blues",
-                    "Jazz"
-                ]
-            ],
-            [
-                "title" => "Yamaha Pacifica 112V",
-                "description" => "The Yamaha Pacifica 112V is an affordable and versatile electric guitar perfect for beginners and intermediate players. It features a comfortable neck, Alnico V pickups, and a coil-tap function for tonal variety.",
-                "thumb" => "https://example.com/images/yamaha-pacifica.jpg",
-                "price" => "$299.99",
-                "series" => "Pacifica",
-                "release_date" => "2019-05-15",
-                "type" => "electric guitar",
-                "artists" => [
-                    "Mike Stern",
-                    "John Patitucci"
+                [
+                    "title" => "Yamaha Pacifica 112V",
+                    "description" => "Un modello versatile e accessibile, adatto per rock, jazz e blues. Perfetto per principianti e chitarristi intermedi.",
+                    "thumb" => "https://example.com/images/yamaha_pacifica.jpg",
+                    "price" => "$300",
+                    "series" => "Pacifica",
+                    "release_date" => "1993-01-01",
+                    "type" => "electric",
+                    "genre" => "Rock",
+                    "artist" => "Mike Stern",
                 ],
-                "genres" => [
-                    "Rock",
-                    "Blues",
-                    "Jazz"
+                [
+                    "title" => "Taylor 814ce",
+                    "description" => "Chitarra acustica di alta qualità, con un suono cristallino e adatta per il fingerstyle. Usata da artisti come Taylor Swift.",
+                    "thumb" => "https://example.com/images/taylor_814ce.jpg",
+                    "price" => "$3,500",
+                    "series" => "814ce",
+                    "release_date" => "1994-01-01",
+                    "type" => "acoustic",
+                    "genre" => "Pop",
+                    "artist" => "Taylor Swift",
                 ]
-            ]
-        ];
+            ];
+            
+        
         
     }
 }
