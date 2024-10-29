@@ -12,6 +12,7 @@ class GuitarController extends Controller
      */
     public function index()
     {
+        $guitars= Guitar::all();
         return view("guitars.index", compact("guitars"));
     }
 

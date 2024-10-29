@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string("title");
             $table->text("description");
             $table->text("thumb");
-            $table->dectimal("price",8 , 2);
+            $table->decimal("price",8 , 2);
             $table->string("series");
             $table->date("release_date");
             $table->string("type");
