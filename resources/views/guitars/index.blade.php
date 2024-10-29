@@ -46,7 +46,7 @@
         <td>{{$guitar->genre}}</td>
         <td>{{$guitar->artist}}</td>
         <td>
-            <a href="#" class="btn btn-sm btn-primary me-1 m-1">Show</a>
+            <a href="{{route("guitar.show", $guitar->id)}}" class="btn btn-sm btn-primary me-1 m-1">Show</a>
             <a href="#" class="btn btn-sm btn-success me-1">Edit</a>
             <a href="#" class="btn btn-sm btn-warning me-1">Delete</a>
           </td>

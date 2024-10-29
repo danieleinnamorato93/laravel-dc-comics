@@ -19,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get("/guitars", [GuitarController::class,"index"])->name("guitar.index");
+Route::get("/guitars/create", [GuitarController::class,"create"])->name("guitar.create");
 Route::get("/guitars/{id}", [GuitarController::class,"show"])->name("guitar.show");
+
