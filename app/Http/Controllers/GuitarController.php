@@ -29,7 +29,11 @@ class GuitarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $guitarData = $request->all();
+
+        $guitar = Guitar::create($guitarData);
+        return redirect()->route("guitar.show",["id"=>$guitar->id]);
+
     }
 
     /**

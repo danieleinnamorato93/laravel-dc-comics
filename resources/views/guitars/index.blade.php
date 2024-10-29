@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-12">
         <div class="mb-3">
-            <a href="#" class="btn btn-sm btn-primary me-1 m-1">Create new Guitar!</a>
+            <a href="{{route("guitar.create")}}" class="btn btn-sm btn-primary me-1 m-1">Create new Guitar!</a>
 
         </div>
     

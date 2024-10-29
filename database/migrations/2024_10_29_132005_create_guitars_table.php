@@ -25,15 +25,15 @@ return new class extends Migration
         Schema::create('guitars', function (Blueprint $table) {
             $table->id();
 
-            $table->string("title");
-            $table->text("description");
-            $table->text("thumb");
-            $table->decimal("price",8 , 2);
-            $table->string("series");
-            $table->date("release_date");
-            $table->string("type");
-            $table->string("genre");
-            $table->string("artist");
+            $table->string("title")->nullable();
+            $table->text("description")->nullable();
+            $table->text("thumb")->nullable();
+            $table->decimal("price",8 , 2)->nullable();
+            $table->string("series")->nullable();
+            $table->date("release_date")->nullable();
+            $table->string("type")->nullable();
+            $table->string("genre")->nullable();
+            $table->string("artist")->nullable();
 
             $table->timestamps();
         });

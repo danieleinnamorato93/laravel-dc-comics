@@ -6,7 +6,8 @@
 
 <div class="container">
       <div class="row justify-content-center">
-        <form class="col-12  card p-4" action="">
+        <form class="col-12  card p-4" method="POST" action="{{route("guitar.store")}}">
+            @csrf
             <h1>Guitar Create:</h1>
     
              
