@@ -46,9 +46,14 @@
         <td>{{$guitar->genre}}</td>
         <td>{{$guitar->artist}}</td>
         <td>
-            <a href="{{route("guitar.show", $guitar->id)}}" class="btn btn-sm btn-primary me-1 m-1">Show</a>
-            <a href="{{route("guitar.edit", $guitar->id)}}" class="btn btn-sm btn-success me-1">Edit</a>
-            <a href="#" class="btn btn-sm btn-warning me-1">Delete</a>
+            <a href="{{route("guitar.show", $guitar->id)}}" class="btn btn-sm btn-primary m-2 me-1 m-1">Show</a>
+            <a href="{{route("guitar.edit", $guitar->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
+            <form action="{{route("guitar.delete", $guitar->id)}}" method="POST">
+              @csrf
+              @method("DELETE")
+
+            <button type="submit" class="btn btn-sm btn-warning m-2">DELETE</button>
+            </form>
           </td>
       </tr>
     

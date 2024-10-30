@@ -71,6 +71,8 @@ class GuitarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $guitar = Guitar::findOrFail($id);
+        $guitar->delete();
+        return redirect()->route("guitar.index");
     }
 }

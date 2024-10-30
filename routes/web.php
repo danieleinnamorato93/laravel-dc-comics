@@ -24,4 +24,5 @@ Route::get("/guitars/create", [GuitarController::class,"create"])->name("guitar.
 Route::get("/guitars/{id}", [GuitarController::class,"show"])->name("guitar.show");
 Route::get("/guitars/{id}/edit", [GuitarController::class,"edit"])->name("guitar.edit");
 Route::put("/guitars/{id}", [GuitarController::class,"update"])->name("guitar.update");
+Route::delete("/guitars/{id}", [GuitarController::class,"destroy"])->name("guitar.delete");
 
