@@ -6,9 +6,11 @@
 
 <div class="container">
       <div class="row justify-content-center">
-        <form class="col-12  card p-4" method="POST" action="{{route("guitar.store")}}">
+        <form class="col-12  card p-4" method="POST" action="{{route("guitar.update",$guitar->id)}}">
+            @method("PUT")
             @csrf
-            @dump($guitar);
+                 {{--!@dump($guitar)--}}
+                
             <h1>Editing{{$guitar->title}}:</h1>
     
              
@@ -16,39 +18,39 @@
     
                 <div class="mb-3">
                     <label for="guitar-title" class="form-label">Modello:</label>
-                    <input type="text" class="form-control" id="guitar-title" name="title">
+                    <input type="text" class="form-control" id="guitar-title" name="title" value="{{$guitar->title}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-description" class="form-label">Descrizione:</label>
-                    <input type="text" class="form-control" id="guitar-description" name="guitar-description">
+                    <input type="text" class="form-control" id="guitar-description" name="guitar-description" value="{{$guitar->description}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-thumb" class="form-label">Link Url Img</label>
-                    <input type="text" class="form-control" id="guitar-thumb" name="thumb">
+                    <input type="text" class="form-control" id="guitar-thumb" name="thumb" value="{{$guitar->thumb}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-price" class="form-label">Prezzo:</label>
-                    <input type="text" class="form-control" id="guitar-price" name="price">
+                    <input type="text" class="form-control" id="guitar-price" name="price" value="{{$guitar->price}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-series" class="form-label">Serie:</label>
-                    <input type="text" class="form-control" id="guitar-series" name="series">
+                    <input type="text" class="form-control" id="guitar-series" name="series" value="{{$guitar->series}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-release_date" class="form-label">Data Rilascio:</label>
-                    <input type="text" class="form-control" id="guitar-release_date" name="release_date">
+                    <input type="text" class="form-control" id="guitar-release_date" name="release_date" value="{{$guitar->release_date}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-type" class="form-label">Tipo:</label>
-                    <input type="text" class="form-control" id="guitar-type" name="type">
+                    <input type="text" class="form-control" id="guitar-type" name="type" value="{{$guitar->type}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-genre" class="form-label">Genere:</label>
-                    <input type="text" class="form-control" id="guitar-genre" name="genre">
+                    <input type="text" class="form-control" id="guitar-genre" name="genre" value="{{$guitar->genre}}">
                 </div>
                 <div class="mb-3">
                     <label for="guitar-artist" class="form-label">Artista:</label>
-                    <input type="text" class="form-control" id="guitar-artist" name="artist">
+                    <input type="text" class="form-control" id="guitar-artist" name="artist" value="{{$guitar->artist}}">
                 </div>
            <div class="mb-3 d-flex justify-content-center align-items-center">
             <button type="submit" class="btn btn-primary">Crea la tua nuova chitarra!</button>
