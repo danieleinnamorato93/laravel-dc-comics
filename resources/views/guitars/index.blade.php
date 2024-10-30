@@ -48,7 +48,7 @@
         <td>
             <a href="{{route("guitar.show", $guitar->id)}}" class="btn btn-sm btn-primary m-2 me-1 m-1">Show</a>
             <a href="{{route("guitar.edit", $guitar->id)}}" class="btn btn-sm btn-success m-2 me-1">Edit</a>
-            <form action="{{route("guitar.delete", $guitar->id)}}" method="POST">
+            <form action="{{route("guitar.delete", $guitar->id)}}" method="POST" class="guitar-destroyer" custom-data-name="{{$guitar->title}}">
               @csrf
               @method("DELETE")
 
@@ -69,4 +69,8 @@
 </div>
 </div>
 </div>
+@endsection
+
+@section("additional-scripts")
+@vite("resources/js/guitars/delete-confirm.js")
 @endsection

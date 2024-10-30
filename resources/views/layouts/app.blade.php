@@ -11,5 +11,6 @@
 @yield("main-content")
 
 @vite("resources/js/app.js")
+@yield("additional-scripts")
 </body>
 </html>
