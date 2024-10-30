@@ -3,7 +3,7 @@
 @section("page-title")
 
 @section("main-content")
-<h1>Guitar Show:</h1>
+<h1>{{$guitar["title"]}} Page:</h1>
 <div class="container">
     <div class="row justify-content-center">
      
@@ -11,9 +11,9 @@
         <div class="card col-2  m-3">
                 {{--? "title","description","thumb","price","series","release_date","type","genre","artist"--}}
             <div class="card-body">
+              <img src="{{$guitar["thumb"]}}" alt="">
               <h5 class="card-title">Modello: {{$guitar->title}}</h5>
               <h5 class="card-title">Descrizione: {{$guitar->description}}</h5>
-              <h5 class="card-title">Link Url: {{$guitar->thumb}}</h5>
               <h5 class="card-title">Prezzo: {{$guitar->price}}</h5>
               <h5 class="card-title">Serie: {{$guitar->series}}</h5>
               <h5 class="card-title">Data di Rilascio: {{$guitar->release_date}}</h5>
