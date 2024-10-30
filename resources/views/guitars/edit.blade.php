@@ -8,6 +8,7 @@
       <div class="row justify-content-center">
         <form class="col-12  card p-4" method="POST" action="{{route("guitar.store")}}">
             @csrf
+            @dump($guitar);
             <h1>Editing{{$guitar->title}}:</h1>
     
              

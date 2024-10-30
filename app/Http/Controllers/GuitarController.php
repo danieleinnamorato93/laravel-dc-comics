@@ -59,7 +59,11 @@ class GuitarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $formData = $request->all();
+        $guitar = Guitar::findOrFail($id);
+
+        $guitar->update($formData);
+        return redirect()->route("guitar.show",["id"=>$guitar->id]);
     }
 
     /**
