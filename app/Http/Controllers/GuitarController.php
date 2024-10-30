@@ -50,7 +50,8 @@ class GuitarController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $guitar = Guitar::findOrFail($id);
+        return view("guitars.edit", compact("guitar"));
     }
 
     /**
