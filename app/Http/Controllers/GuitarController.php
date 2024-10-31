@@ -40,6 +40,18 @@ class GuitarController extends Controller
             "type"=>"string|min:3",
             "genre"=>"string|uppercase|min:3",
             "artist"=>"string|min:5|",
+        ],[
+            "title.required"=>"Il nome del modello è necessario",
+            "description.min"=>"La descrizione necessita di almeno 15 caratteri",
+            "thumb.url"=>"Metti un Url valido",
+            "price.decimal"=>"Il prezzo va espresso in questo formato es. 3500,00",
+            "series.min"=>"Usa almeno 5 caratteri",
+            "release_date.min"=>"Usa un formato di data corretto es. 1993-01-01",
+            "type.min"=>"Scrivi almeno 3 caratteri",
+            "genre.uppercase"=>"Il genere musicale è appartenenza perciò urlalo forte e scrivi in CAPS LOCK!!!",
+            "artist.min"=>"Scrivi almeno 5 caratteri, fai il piacere",
+            
+            
         ]);
 
 
@@ -82,6 +94,18 @@ class GuitarController extends Controller
             "type"=>"string|min:3",
             "genre"=>"string|uppercase|min:3",
             "artist"=>"string|min:5|",
+        ],[
+            "title.required"=>"Il nome del modello è necessario",
+            "description.min"=>"La descrizione necessita di almeno 15 caratteri",
+            "thumb.url"=>"Metti un Url valido",
+            "price.decimal"=>"Il prezzo va espresso in questo formato es. 3500,00",
+            "series.min"=>"Usa almeno 5 caratteri",
+            "release_date.min"=>"Usa un formato di data corretto es. 1993-01-01",
+            "type.min"=>"Scrivi almeno 3 caratteri",
+            "genre.uppercase"=>"Il genere musicale è appartenenza perciò urlalo forte e scrivi in CAPS LOCK!!!",
+            "artist.min"=>"Scrivi almeno 5 caratteri, fai il piacere",
+            
+            
         ]);
 
         $guitar = Guitar::findOrFail($id);
