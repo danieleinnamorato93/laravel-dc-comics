@@ -32,7 +32,7 @@ class GuitarController extends Controller
     {
         $formData = $request->validate([
             "title"=>"required|max:255|min:3|string|",
-            "description"=>"required|min:15",
+            "description"=>"min:15",
             "thumb"=>"url",
             "price"=>"decimal:2,8|required",
             "series"=>"min:5",
@@ -72,7 +72,18 @@ class GuitarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $formData = $request->all();
+        $formData = $request->validate([
+            "title"=>"required|max:255|min:3|string|",
+            "description"=>"required|min:15",
+            "thumb"=>"url",
+            "price"=>"decimal:2,8|required",
+            "series"=>"min:5",
+            "release_date"=>"date|required",
+            "type"=>"string|min:3",
+            "genre"=>"string|uppercase|min:3",
+            "artist"=>"string|min:5|",
+        ]);
+
         $guitar = Guitar::findOrFail($id);
 
         $guitar->update($formData);
