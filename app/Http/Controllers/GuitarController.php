@@ -26,11 +26,24 @@ class GuitarController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     */
+     */ //* filled= "title","description","thumb","price","series","release_date","type","genre","artist"
+
     public function store(Request $request)
     {
-        $guitarData = $request->all();
+        $request->validate([
+            "title"=>"required|max:255|min:3|string|",
+            "description"=>"required|min:15",
+            "thumb"=>"url:http,https",
+            "price"=>"decimal:2,8|required",
+            "series"=>"min:5",
+            "release_date"=>"date|required",
+            "type"=>"string|min:3",
+            "genre"=>"string|uppercase|min:3",
+            "artist"=>"string|min:5|",
+        ]);
 
+
+        $guitarData = $request->all();
         $guitar = Guitar::create($guitarData);
         return redirect()->route("guitar.show",["id"=>$guitar->id]);
 
