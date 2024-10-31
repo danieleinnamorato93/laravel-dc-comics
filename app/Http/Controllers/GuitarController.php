@@ -30,7 +30,7 @@ class GuitarController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $formData = $request->validate([
             "title"=>"required|max:255|min:3|string|",
             "description"=>"required|min:15",
             "thumb"=>"url:http,https",
