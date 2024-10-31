@@ -33,7 +33,7 @@ class GuitarController extends Controller
         $formData = $request->validate([
             "title"=>"required|max:255|min:3|string|",
             "description"=>"required|min:15",
-            "thumb"=>"url:http,https",
+            "thumb"=>"url",
             "price"=>"decimal:2,8|required",
             "series"=>"min:5",
             "release_date"=>"date|required",
